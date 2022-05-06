@@ -11,6 +11,7 @@ from torchvision.models.detection import FasterRCNN
 
 
 def obj_model():
+    #Using efficient net backbone
     backbone = torchvision.models.efficientnet_b0(pretrained = True).features
     backbone.out_channels = 1280
     # let's make the RPN generate 5 x 3 anchors per spatial
